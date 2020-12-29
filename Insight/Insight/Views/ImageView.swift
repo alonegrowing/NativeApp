@@ -19,8 +19,9 @@ struct ImageView: View {
             Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width:100, height:100)
-        }.onReceive(imageLoader.dataPublisher) { data in
+                .frame(width: 280, height: 280)
+        }
+        .onReceive(imageLoader.dataPublisher) { data in
             self.image = UIImage(data: data) ?? UIImage()
         }
     }
@@ -28,6 +29,6 @@ struct ImageView: View {
 
 struct ImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageView(withURL: "")
+        ImageView(withURL: "https://wx4.sinaimg.cn/mw690/006kbplagy1gkqxr43rzfj30n00n0tcm.jpg")
     }
 }

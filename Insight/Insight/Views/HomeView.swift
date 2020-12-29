@@ -31,19 +31,16 @@ struct HomeView: View {
                 NavigationLink(
                     destination: DetailView(),
                     label: {
-                        ImageView(withURL: item.cover)
                         VStack(alignment: .leading) {
-                            Text(item.id).font(.system(size: 15, design: .rounded))
-                            HStack {
-                                Text(item.titleName).font(.subheadline)
-                                Spacer()
-                                Text(item.titleName).font(.subheadline)
-                            }
+                            ImageView(withURL: "https://wx4.sinaimg.cn/mw690/006kbplagy1gkqxr43rzfj30n00n0tcm.jpg")
+                            Text(item.id).font(.system(size: 15))
                         }
                         
-                    })
+                    }
+                )
             }
-            .navigationTitle("推荐").font(.system(size: 15, design: .rounded))
+            .listStyle(InsetGroupedListStyle())
+            .navigationTitle("推荐")
             .onAppear(perform: loadData)
         }
     }
