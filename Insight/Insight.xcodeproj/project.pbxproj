@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E4AFA2D259AC85200659A7A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AFA2C259AC85200659A7A /* ImageLoader.swift */; };
+		2E4AFA30259AC88B00659A7A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AFA2F259AC88B00659A7A /* ImageView.swift */; };
 		F56E5487259A12A90089DCD8 /* InsightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E5486259A12A90089DCD8 /* InsightApp.swift */; };
 		F56E5489259A12A90089DCD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E5488259A12A90089DCD8 /* ContentView.swift */; };
 		F56E548B259A12AA0089DCD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F56E548A259A12AA0089DCD8 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E4AFA2C259AC85200659A7A /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		2E4AFA2F259AC88B00659A7A /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		F56E5483259A12A90089DCD8 /* Insight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56E5486259A12A90089DCD8 /* InsightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightApp.swift; sourceTree = "<group>"; };
 		F56E5488259A12A90089DCD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E4AFA2B259AC83E00659A7A /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				2E4AFA2C259AC85200659A7A /* ImageLoader.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		F56E547A259A12A90089DCD8 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +74,7 @@
 		F56E5485259A12A90089DCD8 /* Insight */ = {
 			isa = PBXGroup;
 			children = (
+				2E4AFA2B259AC83E00659A7A /* Loader */,
 				F56E5499259A12CD0089DCD8 /* Views */,
 				F56E5498259A12C80089DCD8 /* Model */,
 				F56E5486259A12A90089DCD8 /* InsightApp.swift */,
@@ -96,6 +109,7 @@
 				F56E549E259A133A0089DCD8 /* MessageView.swift */,
 				F56E54A4259A13A60089DCD8 /* DetailView.swift */,
 				F56E54A8259A13D60089DCD8 /* ProfileView.swift */,
+				2E4AFA2F259AC88B00659A7A /* ImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +189,8 @@
 				F56E5489259A12A90089DCD8 /* ContentView.swift in Sources */,
 				F56E5487259A12A90089DCD8 /* InsightApp.swift in Sources */,
 				F56E54A9259A13D60089DCD8 /* ProfileView.swift in Sources */,
+				2E4AFA30259AC88B00659A7A /* ImageView.swift in Sources */,
+				2E4AFA2D259AC85200659A7A /* ImageLoader.swift in Sources */,
 				F56E54A2259A137F0089DCD8 /* DiscoveryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,13 +31,13 @@ struct HomeView: View {
                 NavigationLink(
                     destination: DetailView(),
                     label: {
-                        Image("fall.leaves").resizable().scaledToFit().frame(width: 50.0, height: 50.0, alignment: .center)
+                        ImageView(withURL: item.cover)
                         VStack(alignment: .leading) {
                             Text(item.id).font(.system(size: 15, design: .rounded))
                             HStack {
                                 Text(item.titleName).font(.subheadline)
                                 Spacer()
-                                Text(item.cover).font(.subheadline)
+                                Text(item.titleName).font(.subheadline)
                             }
                         }
                         
