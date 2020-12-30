@@ -4,7 +4,7 @@ struct ContentView: View {
     @State private var selection = 0
     var body: some View {
         TabView(selection: $selection) {
-            ProductCardView(image: "Product_1", title: "Autumn Soup", type: "Entree", price: 11.99)
+            CardView()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("首页")
