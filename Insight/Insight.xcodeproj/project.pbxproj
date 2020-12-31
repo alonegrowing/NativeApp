@@ -15,6 +15,7 @@
 		2E4AFA46259C40B600659A7A /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AFA45259C40B600659A7A /* DataLoader.swift */; };
 		2E4AFA5F259C4FC400659A7A /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E4AFA5E259C4FC400659A7A /* content.json */; };
 		2E4AFA63259C74EA00659A7A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AFA62259C74EA00659A7A /* HomeView.swift */; };
+		F56078B4259D92FA00E7762C /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56078B3259D92FA00E7762C /* FeedView.swift */; };
 		F56E5487259A12A90089DCD8 /* InsightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E5486259A12A90089DCD8 /* InsightApp.swift */; };
 		F56E5489259A12A90089DCD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E5488259A12A90089DCD8 /* ContentView.swift */; };
 		F56E548B259A12AA0089DCD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F56E548A259A12AA0089DCD8 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		F56E54A2259A137F0089DCD8 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E54A1259A137F0089DCD8 /* DiscoveryView.swift */; };
 		F56E54A5259A13A60089DCD8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E54A4259A13A60089DCD8 /* DetailView.swift */; };
 		F56E54A9259A13D60089DCD8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E54A8259A13D60089DCD8 /* ProfileView.swift */; };
+		F56E54B6259CB6110089DCD8 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E54B5259CB6110089DCD8 /* CircleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,7 @@
 		2E4AFA45259C40B600659A7A /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		2E4AFA5E259C4FC400659A7A /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
 		2E4AFA62259C74EA00659A7A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F56078B3259D92FA00E7762C /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		F56E5483259A12A90089DCD8 /* Insight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56E5486259A12A90089DCD8 /* InsightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightApp.swift; sourceTree = "<group>"; };
 		F56E5488259A12A90089DCD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +47,7 @@
 		F56E54A1259A137F0089DCD8 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
 		F56E54A4259A13A60089DCD8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F56E54A8259A13D60089DCD8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F56E54B5259CB6110089DCD8 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleImage.swift; path = "../../../../APP/SwiftUI/Other Projects/Jike/SwiftUI_Jike/Cell/CircleImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				F56E54A1259A137F0089DCD8 /* DiscoveryView.swift */,
+				F56E54B5259CB6110089DCD8 /* CircleImage.swift */,
 				F56E549E259A133A0089DCD8 /* MessageView.swift */,
 				F56E54A4259A13A60089DCD8 /* DetailView.swift */,
 				F56E54A8259A13D60089DCD8 /* ProfileView.swift */,
@@ -133,6 +138,7 @@
 				2E4AFA3E259B0F0C00659A7A /* ProductCardView.swift */,
 				2E4AFA41259C2CE600659A7A /* CardView.swift */,
 				2E4AFA62259C74EA00659A7A /* HomeView.swift */,
+				F56078B3259D92FA00E7762C /* FeedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,12 +216,14 @@
 				F56E549F259A133A0089DCD8 /* MessageView.swift in Sources */,
 				F56E54A5259A13A60089DCD8 /* DetailView.swift in Sources */,
 				2E4AFA63259C74EA00659A7A /* HomeView.swift in Sources */,
+				F56E54B6259CB6110089DCD8 /* CircleImage.swift in Sources */,
 				F56E5489259A12A90089DCD8 /* ContentView.swift in Sources */,
 				2E4AFA36259AE92000659A7A /* Poems.swift in Sources */,
 				F56E5487259A12A90089DCD8 /* InsightApp.swift in Sources */,
 				F56E54A9259A13D60089DCD8 /* ProfileView.swift in Sources */,
 				2E4AFA30259AC88B00659A7A /* ImageView.swift in Sources */,
 				2E4AFA2D259AC85200659A7A /* ImageLoader.swift in Sources */,
+				F56078B4259D92FA00E7762C /* FeedView.swift in Sources */,
 				2E4AFA46259C40B600659A7A /* DataLoader.swift in Sources */,
 				2E4AFA3F259B0F0C00659A7A /* ProductCardView.swift in Sources */,
 				2E4AFA42259C2CE600659A7A /* CardView.swift in Sources */,
