@@ -9,8 +9,7 @@ import SwiftUI
 
 struct DiscoveryView: View {
     var body: some View {
-        Text("内容探索与发现")
-            .font(.system(size: 30, weight: .bold, design: .rounded))
+        Text("ユーザー名").font(.custom("KozGoPro-Regular", size: 16))
     }
 }
 

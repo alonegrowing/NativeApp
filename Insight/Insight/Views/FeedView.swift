@@ -9,6 +9,7 @@ import SwiftUI
 
 extension Color {
     static let ReadColor = Color("ReadColor")
+    static let TextColor = Color("TextColor")
  
     // ... add the rest of your colors here
 }
@@ -31,21 +32,48 @@ struct FeedView: View {
                 }.frame(height: 50)
                 VStack(alignment: .leading){
                     Text(content)
-                        .frame(minHeight: 50, alignment: .top)
-                        .font(Font.system(size: 15))
-                        .padding(.top, 20)//.lineLimit(-1)
-                        .foregroundColor(Color.ReadColor)
+                        .frame(minHeight: 30, alignment: .top)
+                        //.font(Font.system(size: 17))
+                        .lineSpacing(7) // 行间距
+                        .font(.custom("KozGoPro-Regular", size: 16))
+                        .padding(.top, 10)//.lineLimit(-1)
+                        .padding(.bottom, 10)
+                        .foregroundColor(Color(hex:0x363636))
+                        
                     Image(imgName).resizable().aspectRatio(contentMode: .fit).frame(width: 300, height:200, alignment: .leading)
                 }
-            }.frame(minWidth: 100, maxWidth: .infinity, minHeight: 44).padding(.top, 20)
+            }.frame(minWidth: 100, maxWidth: .infinity, minHeight: 44).padding(.top, 10)
             HStack{
                 //Spacer()
-                Image("dianzan");Spacer()
-                Image("pinglun");Spacer()
-                Image("share");Spacer()
+                Image("good")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 20, height: 20)
+                    .opacity(0.8)
+                Spacer()
+                Image("comment")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 20, height: 20)
+                    .opacity(0.4)
+                Spacer()
+                Image("share")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 20, height: 20)
+                    .opacity(0.4)
+                Spacer()
                 Image("shenglue")
-            }.padding(.bottom, 5).padding(.leading, 20).padding(.top, 10)
-        }.lineSpacing(0).frame(minHeight: 300)
+            }.padding(.top, 10)
+        }
+        //.lineSpacing(0)
+        .padding(.leading, 20)
+        .padding(.trailing, 20)
+        .padding(.top, 10)
+        .padding(.bottom, 10)
+        .frame(minHeight: 300)
+        .background(Color(hex:0xFFFFFF)) // 设置自定义颜色
+        
     }
 }
 
