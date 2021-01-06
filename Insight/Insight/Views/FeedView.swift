@@ -32,6 +32,7 @@ struct FeedView: View {
                 }.frame(height: 50)
                 VStack(alignment: .leading){
                     Text(content)
+                        .kerning(1) //字间距
                         .frame(minHeight: 30, alignment: .top)
                         //.font(Font.system(size: 17))
                         .lineSpacing(7) // 行间距
