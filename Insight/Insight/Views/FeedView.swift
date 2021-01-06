@@ -34,8 +34,8 @@ struct FeedView: View {
                     Text(content)
                         .kerning(1) //字间距
                         .frame(minHeight: 30, alignment: .top)
-                        //.font(Font.system(size: 17))
                         .lineSpacing(7) // 行间距
+                        //.font(Font.system(size: 17))
                         .font(.custom("KozGoPro-Regular", size: 16))
                         .padding(.top, 10)//.lineLimit(-1)
                         .padding(.bottom, 10)
@@ -45,24 +45,32 @@ struct FeedView: View {
                 }
             }.frame(minWidth: 100, maxWidth: .infinity, minHeight: 44).padding(.top, 10)
             HStack{
-                //Spacer()
-                Image("good")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 20, height: 20)
-                    .opacity(0.8)
+                HStack{
+                    Image("good")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 20, height: 20)
+                        .opacity(0.8)
+                    Text("216").font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
+                }
                 Spacer()
-                Image("comment")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 20, height: 20)
-                    .opacity(0.4)
+                HStack{
+                    Image("comment")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 20, height: 20)
+                        .opacity(0.4)
+                    Text("2").font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
+                }
                 Spacer()
-                Image("share")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 20, height: 20)
-                    .opacity(0.4)
+                HStack{
+                    Image("share")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 20, height: 20)
+                        .opacity(0.4)
+                    Text("390132").font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
+                }
                 Spacer()
                 Image("shenglue")
             }.padding(.top, 10)
