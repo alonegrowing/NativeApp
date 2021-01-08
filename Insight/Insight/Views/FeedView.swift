@@ -9,33 +9,16 @@ import SwiftUI
 import Alamofire
 import URLImage
 
-extension Color {
-    static let ReadColor = Color("ReadColor")
-    static let TextColor = Color("TextColor")
- 
-    // ... add the rest of your colors here
-}
-
 struct FeedView: View {
-    var nickName:String
+    var nickname:String
     var avatar:String
-    var timeStamp:String
+    var timestamp:String
     var content:String
-    var imgName:String
+    var imgURL:String
     var commentNum: Int
     var goodNum: Int
     var shareNum: Int
     var body: some View {
-
-        /* let img = URL(string: "https://wx2.sinaimg.cn/mw690/006erAWHly1gmfcdra50aj322o3407wi.jpg") // 加载远程网络图片
-        URLImage(url: img!, content: { image in
-            image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 300, height: 300)
-                
-        })*/
-        
         VStack(alignment: .leading){
             VStack(alignment: .leading){
                 HStack(){
@@ -51,8 +34,8 @@ struct FeedView: View {
                             
                     })
                     VStack(alignment: .leading){
-                        Text(nickName).padding(.top, 7).padding(.bottom, 2);Spacer()
-                        Text(timeStamp).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.bottom, 2)
+                        Text(nickname).padding(.top, 7).padding(.bottom, 2);Spacer()
+                        Text(timestamp).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.bottom, 2)
                     }.padding(.leading, 5)
                 }.frame(height: 50)
                 VStack(alignment: .leading){
@@ -65,9 +48,7 @@ struct FeedView: View {
                         .padding(.top, 10)//.lineLimit(-1)
                         .padding(.bottom, 10)
                         .foregroundColor(Color(hex:0x363636))
-                        
-                    //Image(imgName).resizable().aspectRatio(contentMode: .fit).frame(width: 300, height:200, alignment: .leading)
-                    URLImage(url: URL(string: imgName)!, content: { image in
+                    URLImage(url: URL(string: imgURL)!, content: { image in
                         image
                             .resizable().aspectRatio(contentMode: .fit).frame(width: 300, height:200, alignment: .leading)
                             
@@ -119,11 +100,11 @@ struct FeedView: View {
 struct FeedView_Previews: PreviewProvider {
     static var previews: some View {
         FeedView(
-            nickName: "皮卡丘",
+            nickname: "皮卡丘",
             avatar: "pokemon",
-            timeStamp: "2小时前",
+            timestamp: "2小时前",
             content: "发明一种新吃法#一人食灌蛋手抓饼夹小油条泡菜香肠，挤上番茄酱甜面酱巨好吃呀😘！！灌蛋是灵魂，不能偷懒！！",
-            imgName: "sucai",
+            imgURL: "sucai",
             commentNum: 216,
             goodNum: 2,
             shareNum: 390132

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E4C24A825A808E3001A07D8 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2E4C24A725A808E3001A07D8 /* URLImage */; };
-		2EC5204725A4741900191B24 /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5204625A4741900191B24 /* Poem.swift */; };
+		2E4C24AC25A85DA1001A07D8 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4C24AB25A85DA1001A07D8 /* Feed.swift */; };
 		2EC5204B25A48C8500191B24 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5204A25A48C8500191B24 /* HomeView.swift */; };
 		2EC5204E25A48F1F00191B24 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5204D25A48F1F00191B24 /* FeedView.swift */; };
 		2EC5205325A58E0200191B24 /* KozGoPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2EC5205225A58E0200191B24 /* KozGoPro-Regular.otf */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2EC5204625A4741900191B24 /* Poem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
+		2E4C24AB25A85DA1001A07D8 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		2EC5204A25A48C8500191B24 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2EC5204D25A48F1F00191B24 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		2EC5205225A58E0200191B24 /* KozGoPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KozGoPro-Regular.otf"; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		2EC5204525A4740E00191B24 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2EC5204625A4741900191B24 /* Poem.swift */,
+				2E4C24AB25A85DA1001A07D8 /* Feed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -69,18 +69,10 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		2ED9582D25A6BA0600B7B73C /* Image */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Image;
-			sourceTree = "<group>";
-		};
 		2ED9584125A7262100B7B73C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
 				2EC5205125A58DA800191B24 /* Font */,
-				2ED9582D25A6BA0600B7B73C /* Image */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -216,11 +208,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F56E549F259A133A0089DCD8 /* MessageView.swift in Sources */,
+				2E4C24AC25A85DA1001A07D8 /* Feed.swift in Sources */,
 				F56E54A5259A13A60089DCD8 /* DetailView.swift in Sources */,
 				F56E5489259A12A90089DCD8 /* ContentView.swift in Sources */,
 				F56E5487259A12A90089DCD8 /* InsightApp.swift in Sources */,
 				F56E54A9259A13D60089DCD8 /* ProfileView.swift in Sources */,
-				2EC5204725A4741900191B24 /* Poem.swift in Sources */,
 				2EC5204E25A48F1F00191B24 /* FeedView.swift in Sources */,
 				2EC5204B25A48C8500191B24 /* HomeView.swift in Sources */,
 				F56E54A2259A137F0089DCD8 /* DiscoveryView.swift in Sources */,
