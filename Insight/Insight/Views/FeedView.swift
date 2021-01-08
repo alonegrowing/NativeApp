@@ -22,6 +22,9 @@ struct FeedView: View {
     var timeStamp:String
     var content:String
     var imgName:String
+    var commentNum: Int
+    var goodNum: Int
+    var shareNum: Int
     var body: some View {
 
         /* let img = URL(string: "https://wx2.sinaimg.cn/mw690/006erAWHly1gmfcdra50aj322o3407wi.jpg") // 加载远程网络图片
@@ -36,7 +39,17 @@ struct FeedView: View {
         VStack(alignment: .leading){
             VStack(alignment: .leading){
                 HStack(){
-                    AvatarImage(imgName: avatar)
+                    //AvatarImage(imgName: avatar)
+                    URLImage(url: URL(string: avatar)!, content: { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 45, height: 45)
+                            //.clipShape(Circle())
+                            //.overlay(Circle().stroke(Color.white, lineWidth: 1))
+                            .shadow(radius: 3)
+                            
+                    })
                     VStack(alignment: .leading){
                         Text(nickName).padding(.top, 7).padding(.bottom, 2);Spacer()
                         Text(timeStamp).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.bottom, 2)
@@ -53,7 +66,12 @@ struct FeedView: View {
                         .padding(.bottom, 10)
                         .foregroundColor(Color(hex:0x363636))
                         
-                    Image(imgName).resizable().aspectRatio(contentMode: .fit).frame(width: 300, height:200, alignment: .leading)
+                    //Image(imgName).resizable().aspectRatio(contentMode: .fit).frame(width: 300, height:200, alignment: .leading)
+                    URLImage(url: URL(string: imgName)!, content: { image in
+                        image
+                            .resizable().aspectRatio(contentMode: .fit).frame(width: 300, height:200, alignment: .leading)
+                            
+                    })
                 }
             }.frame(minWidth: 100, maxWidth: .infinity, minHeight: 44).padding(.top, 10)
             HStack{
@@ -63,7 +81,7 @@ struct FeedView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 20, height: 20)
                         .opacity(0.8)
-                    Text("216").font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
+                    Text(String(goodNum)).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
                 }
                 Spacer()
                 HStack{
@@ -72,7 +90,7 @@ struct FeedView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 20, height: 20)
                         .opacity(0.4)
-                    Text("2").font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
+                    Text(String(commentNum)).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
                 }
                 Spacer()
                 HStack{
@@ -81,7 +99,7 @@ struct FeedView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 20, height: 20)
                         .opacity(0.4)
-                    Text("390132").font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
+                    Text(String(shareNum)).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
                 }
                 Spacer()
                 Image("shenglue")
@@ -100,6 +118,15 @@ struct FeedView: View {
 
 struct FeedView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedView(nickName: "皮卡丘", avatar: "pokemon", timeStamp: "2小时前",content: "发明一种新吃法#一人食灌蛋手抓饼夹小油条泡菜香肠，挤上番茄酱甜面酱巨好吃呀😘！！灌蛋是灵魂，不能偷懒！！", imgName: "sucai")
+        FeedView(
+            nickName: "皮卡丘",
+            avatar: "pokemon",
+            timeStamp: "2小时前",
+            content: "发明一种新吃法#一人食灌蛋手抓饼夹小油条泡菜香肠，挤上番茄酱甜面酱巨好吃呀😘！！灌蛋是灵魂，不能偷懒！！",
+            imgName: "sucai",
+            commentNum: 216,
+            goodNum: 2,
+            shareNum: 390132
+        )
     }
 }
