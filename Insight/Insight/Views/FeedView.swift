@@ -87,7 +87,7 @@ struct FeedView: View {
             }.padding(.top, 10)
         }
         //.lineSpacing(0)
-        .padding(.leading, 20)
+        .padding(.leading, 15)
         .padding(.trailing, 20)
         .padding(.top, 10)
         .padding(.bottom, 10)
