@@ -3,23 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E4AFA2D259AC85200659A7A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AFA2C259AC85200659A7A /* ImageLoader.swift */; };
-		2E4AFA30259AC88B00659A7A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AFA2F259AC88B00659A7A /* ImageView.swift */; };
-		2E4AFA3F259B0F0C00659A7A /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AFA3E259B0F0C00659A7A /* ProductCardView.swift */; };
-		2E4AFA42259C2CE600659A7A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AFA41259C2CE600659A7A /* CardView.swift */; };
-		2E4AFA46259C40B600659A7A /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AFA45259C40B600659A7A /* DataLoader.swift */; };
-		2E4AFA5F259C4FC400659A7A /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E4AFA5E259C4FC400659A7A /* content.json */; };
-		2E4AFA63259C74EA00659A7A /* JikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AFA62259C74EA00659A7A /* JikeView.swift */; };
-		2EC5204125A4091D00191B24 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5204025A4091D00191B24 /* CircleImage.swift */; };
+		2E4C24A825A808E3001A07D8 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2E4C24A725A808E3001A07D8 /* URLImage */; };
+		2EC5204125A4091D00191B24 /* AvatarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5204025A4091D00191B24 /* AvatarImage.swift */; };
 		2EC5204725A4741900191B24 /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5204625A4741900191B24 /* Poem.swift */; };
 		2EC5204B25A48C8500191B24 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5204A25A48C8500191B24 /* HomeView.swift */; };
 		2EC5204E25A48F1F00191B24 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5204D25A48F1F00191B24 /* FeedView.swift */; };
 		2EC5205325A58E0200191B24 /* KozGoPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2EC5205225A58E0200191B24 /* KozGoPro-Regular.otf */; };
-		F56078B4259D92FA00E7762C /* FeedViewTMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56078B3259D92FA00E7762C /* FeedViewTMP.swift */; };
+		2ED9584C25A7312E00B7B73C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2ED9584B25A7312E00B7B73C /* Alamofire */; };
 		F56E5487259A12A90089DCD8 /* InsightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E5486259A12A90089DCD8 /* InsightApp.swift */; };
 		F56E5489259A12A90089DCD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E5488259A12A90089DCD8 /* ContentView.swift */; };
 		F56E548B259A12AA0089DCD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F56E548A259A12AA0089DCD8 /* Assets.xcassets */; };
@@ -31,19 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E4AFA2C259AC85200659A7A /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		2E4AFA2F259AC88B00659A7A /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
-		2E4AFA3E259B0F0C00659A7A /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
-		2E4AFA41259C2CE600659A7A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		2E4AFA45259C40B600659A7A /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
-		2E4AFA5E259C4FC400659A7A /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
-		2E4AFA62259C74EA00659A7A /* JikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikeView.swift; sourceTree = "<group>"; };
-		2EC5204025A4091D00191B24 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		2EC5204025A4091D00191B24 /* AvatarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImage.swift; sourceTree = "<group>"; };
 		2EC5204625A4741900191B24 /* Poem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
 		2EC5204A25A48C8500191B24 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2EC5204D25A48F1F00191B24 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		2EC5205225A58E0200191B24 /* KozGoPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KozGoPro-Regular.otf"; sourceTree = "<group>"; };
-		F56078B3259D92FA00E7762C /* FeedViewTMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewTMP.swift; sourceTree = "<group>"; };
 		F56E5483259A12A90089DCD8 /* Insight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56E5486259A12A90089DCD8 /* InsightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightApp.swift; sourceTree = "<group>"; };
 		F56E5488259A12A90089DCD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,29 +47,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E4C24A825A808E3001A07D8 /* URLImage in Frameworks */,
+				2ED9584C25A7312E00B7B73C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2E4AFA2B259AC83E00659A7A /* Loader */ = {
-			isa = PBXGroup;
-			children = (
-				2E4AFA2C259AC85200659A7A /* ImageLoader.swift */,
-				2E4AFA45259C40B600659A7A /* DataLoader.swift */,
-			);
-			path = Loader;
-			sourceTree = "<group>";
-		};
-		2E4AFA5D259C4FB900659A7A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2E4AFA5E259C4FC400659A7A /* content.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		2EC5204525A4740E00191B24 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +69,22 @@
 				2EC5205225A58E0200191B24 /* KozGoPro-Regular.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		2ED9582D25A6BA0600B7B73C /* Image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		2ED9584125A7262100B7B73C /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				2EC5205125A58DA800191B24 /* Font */,
+				2ED9582D25A6BA0600B7B73C /* Image */,
+			);
+			path = Basic;
 			sourceTree = "<group>";
 		};
 		F56E547A259A12A90089DCD8 = {
@@ -119,10 +106,8 @@
 		F56E5485259A12A90089DCD8 /* Insight */ = {
 			isa = PBXGroup;
 			children = (
-				2EC5205125A58DA800191B24 /* Font */,
+				2ED9584125A7262100B7B73C /* Basic */,
 				2EC5204525A4740E00191B24 /* Model */,
-				2E4AFA5D259C4FB900659A7A /* Resources */,
-				2E4AFA2B259AC83E00659A7A /* Loader */,
 				F56E5499259A12CD0089DCD8 /* Views */,
 				F56E5486259A12A90089DCD8 /* InsightApp.swift */,
 				F56E5488259A12A90089DCD8 /* ContentView.swift */,
@@ -148,12 +133,7 @@
 				F56E549E259A133A0089DCD8 /* MessageView.swift */,
 				F56E54A4259A13A60089DCD8 /* DetailView.swift */,
 				F56E54A8259A13D60089DCD8 /* ProfileView.swift */,
-				2E4AFA2F259AC88B00659A7A /* ImageView.swift */,
-				2E4AFA3E259B0F0C00659A7A /* ProductCardView.swift */,
-				2E4AFA41259C2CE600659A7A /* CardView.swift */,
-				2E4AFA62259C74EA00659A7A /* JikeView.swift */,
-				F56078B3259D92FA00E7762C /* FeedViewTMP.swift */,
-				2EC5204025A4091D00191B24 /* CircleImage.swift */,
+				2EC5204025A4091D00191B24 /* AvatarImage.swift */,
 				2EC5204A25A48C8500191B24 /* HomeView.swift */,
 				2EC5204D25A48F1F00191B24 /* FeedView.swift */,
 			);
@@ -176,6 +156,10 @@
 			dependencies = (
 			);
 			name = Insight;
+			packageProductDependencies = (
+				2ED9584B25A7312E00B7B73C /* Alamofire */,
+				2E4C24A725A808E3001A07D8 /* URLImage */,
+			);
 			productName = Insight;
 			productReference = F56E5483259A12A90089DCD8 /* Insight.app */;
 			productType = "com.apple.product-type.application";
@@ -203,6 +187,10 @@
 				Base,
 			);
 			mainGroup = F56E547A259A12A90089DCD8;
+			packageReferences = (
+				2ED9584A25A7312E00B7B73C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2E4C24A625A808E3001A07D8 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = F56E5484259A12A90089DCD8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -220,7 +208,6 @@
 				F56E548E259A12AA0089DCD8 /* Preview Assets.xcassets in Resources */,
 				2EC5205325A58E0200191B24 /* KozGoPro-Regular.otf in Resources */,
 				F56E548B259A12AA0089DCD8 /* Assets.xcassets in Resources */,
-				2E4AFA5F259C4FC400659A7A /* content.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,21 +220,14 @@
 			files = (
 				F56E549F259A133A0089DCD8 /* MessageView.swift in Sources */,
 				F56E54A5259A13A60089DCD8 /* DetailView.swift in Sources */,
-				2E4AFA63259C74EA00659A7A /* JikeView.swift in Sources */,
 				F56E5489259A12A90089DCD8 /* ContentView.swift in Sources */,
 				F56E5487259A12A90089DCD8 /* InsightApp.swift in Sources */,
 				F56E54A9259A13D60089DCD8 /* ProfileView.swift in Sources */,
-				2E4AFA30259AC88B00659A7A /* ImageView.swift in Sources */,
-				2E4AFA2D259AC85200659A7A /* ImageLoader.swift in Sources */,
-				F56078B4259D92FA00E7762C /* FeedViewTMP.swift in Sources */,
-				2E4AFA46259C40B600659A7A /* DataLoader.swift in Sources */,
 				2EC5204725A4741900191B24 /* Poem.swift in Sources */,
 				2EC5204E25A48F1F00191B24 /* FeedView.swift in Sources */,
-				2E4AFA3F259B0F0C00659A7A /* ProductCardView.swift in Sources */,
-				2E4AFA42259C2CE600659A7A /* CardView.swift in Sources */,
 				2EC5204B25A48C8500191B24 /* HomeView.swift in Sources */,
 				F56E54A2259A137F0089DCD8 /* DiscoveryView.swift in Sources */,
-				2EC5204125A4091D00191B24 /* CircleImage.swift in Sources */,
+				2EC5204125A4091D00191B24 /* AvatarImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +416,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E4C24A625A808E3001A07D8 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		2ED9584A25A7312E00B7B73C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E4C24A725A808E3001A07D8 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E4C24A625A808E3001A07D8 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		2ED9584B25A7312E00B7B73C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ED9584A25A7312E00B7B73C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F56E547B259A12A90089DCD8 /* Project object */;
 }

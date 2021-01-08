@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Alamofire
+import URLImage
 
 extension Color {
     static let ReadColor = Color("ReadColor")
@@ -21,10 +23,20 @@ struct FeedView: View {
     var content:String
     var imgName:String
     var body: some View {
+
+        /* let img = URL(string: "https://wx2.sinaimg.cn/mw690/006erAWHly1gmfcdra50aj322o3407wi.jpg") // 加载远程网络图片
+        URLImage(url: img!, content: { image in
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 300, height: 300)
+                
+        })*/
+        
         VStack(alignment: .leading){
             VStack(alignment: .leading){
                 HStack(){
-                    CircleImage(imgName: avatar)
+                    AvatarImage(imgName: avatar)
                     VStack(alignment: .leading){
                         Text(nickName).padding(.top, 7).padding(.bottom, 2);Spacer()
                         Text(timeStamp).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.bottom, 2)
