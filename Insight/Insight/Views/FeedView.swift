@@ -23,14 +23,8 @@ struct FeedView: View {
             VStack(alignment: .leading){
                 HStack(){
                     URLImage(url: URL(string: avatar)!, content: { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 45, height: 45)
-                            //.clipShape(Circle())
-                            //.overlay(Circle().stroke(Color.white, lineWidth: 1))
-                            .shadow(radius: 3)
-                            
+                        image.resizable().aspectRatio(contentMode: .fit).frame(width: 45, height: 45).shadow(radius: 3)
+                            //.clipShape(Circle()).overlay(Circle().stroke(Color.white, lineWidth: 1))
                     })
                     VStack(alignment: .leading){
                         Text(nickname).padding(.top, 7).padding(.bottom, 2);Spacer()
@@ -48,43 +42,27 @@ struct FeedView: View {
                         .padding(.bottom, 10)
                         .foregroundColor(Color(hex:0x363636))
                     URLImage(url: URL(string: imgURL)!, content: { image in
-                        image
-                            .resizable().aspectRatio(contentMode: .fit).frame(width: 300, height:200, alignment: .leading)
-                            
+                        image.resizable().aspectRatio(contentMode: .fit).frame(width: 300, height:200, alignment: .leading)
                     })
                 }
             }.frame(minWidth: 100, maxWidth: .infinity, minHeight: 44).padding(.top, 10)
             HStack{
                 HStack{
-                    Image("good")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 20, height: 20)
-                        .opacity(0.8)
+                    Image("good").resizable().aspectRatio(contentMode: .fit).frame(width: 20, height: 20).opacity(0.8)
                     Text(String(goodNum)).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
                 }
-                //点赞事件
-                .onTapGesture(count: 1, perform: {
-                    // 判断已点或者未点，再做 + 1 或者 -1 操作
-                    // 目前先简单处理，每次点击直接 + 1
+                .onTapGesture(count: 1, perform: { //点赞事件
+                    // 判断已点或者未点，再做 + 1 或者 -1 操作；目前先简单处理，每次点击直接 + 1
                     goodNum += 1
                 })
                 Spacer()
                 HStack{
-                    Image("comment")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 20, height: 20)
-                        .opacity(0.4)
+                    Image("comment").resizable().aspectRatio(contentMode: .fit).frame(width: 20, height: 20).opacity(0.4)
                     Text(String(commentNum)).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
                 }
                 Spacer()
                 HStack{
-                    Image("share")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 20, height: 20)
-                        .opacity(0.4)
+                    Image("share").resizable().aspectRatio(contentMode: .fit).frame(width: 20, height: 20).opacity(0.4)
                     Text(String(shareNum)).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
                 }
                 Spacer()
@@ -92,12 +70,9 @@ struct FeedView: View {
             }.padding(.top, 10)
         }
         //.lineSpacing(0)
-        .padding(.leading, 17)
-        .padding(.trailing, 20)
-        .padding(.bottom, 10)
+        .padding(.leading, 17).padding(.trailing, 20).padding(.bottom, 10)
         .frame(minHeight: 300)
         .background(Color(hex:0xFFFFFF)) // 设置自定义颜色
-        
     }
 }
 

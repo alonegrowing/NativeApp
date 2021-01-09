@@ -28,7 +28,6 @@ extension Color {
 struct HomeView: View {
     @State private var results = [Result]()
     var body: some View {
-        
         VStack {
             VStack{
                 HStack{
