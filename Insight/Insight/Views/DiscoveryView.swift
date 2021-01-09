@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct DiscoveryView: View {
+    
     var body: some View {
-        Text("ユーザー名").font(.custom("KozGoPro-Regular", size: 16))
+        
+        NavigationView {
+            VStack {
+                Text("ユーザー名").font(.custom("KozGoPro-Regular", size: 16))
+            }
+            //.navigationTitle("推荐")
+            .navigationBarTitle("",displayMode: .inline)
+            .navigationBarItems(leading: Text("首页"), trailing: Text("发布"))
+        }
+        
     }
 }
 

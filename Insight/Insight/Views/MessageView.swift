@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct MessageView: View {
-    init() {
-        UINavigationBar.appearance().backgroundColor = .blue
-    }
     var body: some View {
         Text("消息页面")
     }
