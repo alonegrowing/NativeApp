@@ -28,7 +28,22 @@ extension Color {
 struct HomeView: View {
     @State private var results = [Result]()
     var body: some View {
+        
         VStack {
+            VStack{
+                HStack{
+                    Text("09").bold().font(.custom("KozGoPro-Regular", size: 20))
+                    Text("Jan.2021").bold().padding(.leading, -5).padding(.top, 5).font(.custom("KozGoPro-Regular", size: 15))
+                    Spacer()
+                    Text("发布+").bold().font(.custom("KozGoPro-Regular", size: 15))
+                }
+            }
+            .frame(width: nil, height: 40, alignment: .center)
+            .background(Color.white, alignment: .center)
+            .padding(.bottom, -10)
+            .padding(.trailing, 20)
+            .padding(.leading, 17)
+            //.opacity(0.2) 透明度设置
             ScrollView {
                 ForEach(results, id: \.id) {item in
                     FeedView(
@@ -44,7 +59,7 @@ struct HomeView: View {
                 }
             }
         }
-        .statusBar(hidden: true) //隐藏头部状态栏
+        //.statusBar(hidden: true) //隐藏头部状态栏
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(Color(hex: 0xF9FAFA))
         //.edgesIgnoringSafeArea(.all) //利用顶部区域，视图会怼到最顶部上去
