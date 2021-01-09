@@ -44,12 +44,11 @@ struct HomeView: View {
                 }
             }
         }
+        .statusBar(hidden: true) //隐藏头部状态栏
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(Color(hex: 0xF9FAFA))
-        .statusBar(hidden: true) //隐藏头部状态栏
         //.edgesIgnoringSafeArea(.all) //利用顶部区域，视图会怼到最顶部上去
         .onAppear(perform: load)
-        
     }
     
     func load() {

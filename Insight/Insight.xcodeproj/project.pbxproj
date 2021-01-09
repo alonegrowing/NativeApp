@@ -21,6 +21,7 @@
 		F56E54A2259A137F0089DCD8 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E54A1259A137F0089DCD8 /* DiscoveryView.swift */; };
 		F56E54A5259A13A60089DCD8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E54A4259A13A60089DCD8 /* DetailView.swift */; };
 		F56E54A9259A13D60089DCD8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E54A8259A13D60089DCD8 /* ProfileView.swift */; };
+		F5E8402525A8922E001C2C0B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E8402425A8922E001C2C0B /* CommentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F56E54A1259A137F0089DCD8 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
 		F56E54A4259A13A60089DCD8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F56E54A8259A13D60089DCD8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F5E8402425A8922E001C2C0B /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				F56E54A8259A13D60089DCD8 /* ProfileView.swift */,
 				2EC5204A25A48C8500191B24 /* HomeView.swift */,
 				2EC5204D25A48F1F00191B24 /* FeedView.swift */,
+				F5E8402425A8922E001C2C0B /* CommentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				F56E54A9259A13D60089DCD8 /* ProfileView.swift in Sources */,
 				2EC5204E25A48F1F00191B24 /* FeedView.swift in Sources */,
 				2EC5204B25A48C8500191B24 /* HomeView.swift in Sources */,
+				F5E8402525A8922E001C2C0B /* CommentView.swift in Sources */,
 				F56E54A2259A137F0089DCD8 /* DiscoveryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
