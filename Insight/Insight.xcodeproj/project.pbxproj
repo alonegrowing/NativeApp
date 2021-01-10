@@ -23,6 +23,7 @@
 		F56E54A9259A13D60089DCD8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E54A8259A13D60089DCD8 /* ProfileView.swift */; };
 		F5E8402525A8922E001C2C0B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E8402425A8922E001C2C0B /* CommentView.swift */; };
 		F5E8402E25AAD0CF001C2C0B /* DetailMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E8402D25AAD0CF001C2C0B /* DetailMainView.swift */; };
+		F5E8403225AB1424001C2C0B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E8403125AB1424001C2C0B /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F56E54A8259A13D60089DCD8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F5E8402425A8922E001C2C0B /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		F5E8402D25AAD0CF001C2C0B /* DetailMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMainView.swift; sourceTree = "<group>"; };
+		F5E8403125AB1424001C2C0B /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				2E4C24AB25A85DA1001A07D8 /* Feed.swift */,
+				F5E8403125AB1424001C2C0B /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				F56E5489259A12A90089DCD8 /* ContentView.swift in Sources */,
 				F56E5487259A12A90089DCD8 /* InsightApp.swift in Sources */,
 				F56E54A9259A13D60089DCD8 /* ProfileView.swift in Sources */,
+				F5E8403225AB1424001C2C0B /* Comment.swift in Sources */,
 				2EC5204E25A48F1F00191B24 /* FeedView.swift in Sources */,
 				2EC5204B25A48C8500191B24 /* HomeView.swift in Sources */,
 				F5E8402525A8922E001C2C0B /* CommentView.swift in Sources */,
