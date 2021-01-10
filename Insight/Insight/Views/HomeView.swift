@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Alamofire
-
 extension Color {
     init(hex: Int, alpha: Double = 1) {
         let components = (
