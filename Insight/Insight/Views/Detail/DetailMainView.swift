@@ -67,11 +67,11 @@ struct DetailMainView: View {
                 }
                 Spacer()
                 Image("shenglue")
-            }.padding(.top, 30)
+            }.padding(.top, 2)
         }
         //.lineSpacing(0)
         .padding(.leading, 17).padding(.trailing, 20).padding(.bottom, 10)
-        .frame(minHeight: 300)
+        .frame(minHeight: 200)
         .background(Color(hex:0xFFFFFF)) // 设置自定义颜色
     }
 }

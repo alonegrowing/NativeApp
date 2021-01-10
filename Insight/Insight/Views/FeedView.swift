@@ -82,7 +82,7 @@ struct FeedView: View {
                 }
                 Spacer()
                 Image("shenglue")
-            }.padding(.top, 10)
+            }.padding(.top, 2)
         }
         //.lineSpacing(0)
         .padding(.leading, 17).padding(.trailing, 20).padding(.bottom, 10)
