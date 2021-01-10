@@ -1,15 +1,14 @@
 //
-//  FeedView.swift
+//  DetailMainView.swift
 //  Insight
 //
-//  Created by 徐勇 on 2021/1/5.
+//  Created by 徐勇 on 2021/1/10.
 //
 
 import SwiftUI
-import Alamofire
 import URLImage
 
-struct FeedView: View {
+struct DetailMainView: View {
     var nickname:String
     var avatar:String
     var timestamp:String
@@ -41,12 +40,12 @@ struct FeedView: View {
                         .padding(.top, 10)//.lineLimit(-1)
                         .padding(.bottom, 10)
                         .foregroundColor(Color(hex:0x363636))
-                        
+                        .fixedSize(horizontal: false, vertical: true)
                     URLImage(url: URL(string: imgURL)!, content: { image in
                         image.resizable().aspectRatio(contentMode: .fit).frame(width: 300, height:200, alignment: .leading)
                     })
                 }
-            }.frame(minWidth: 100, maxWidth: .infinity, minHeight: 44).padding(.top, 10)
+            }.frame(minWidth: 100, maxWidth: .infinity, minHeight: 44).padding(.top, 10).padding(.bottom, 5)
             HStack{
                 HStack{
                     Image("good").resizable().aspectRatio(contentMode: .fit).frame(width: 20, height: 20).opacity(0.8)
@@ -57,24 +56,10 @@ struct FeedView: View {
                     goodNum += 1
                 })
                 Spacer()
-                NavigationLink(
-                    destination: DetailView(
-                        nickname: nickname,
-                        avatar: avatar,
-                        timestamp: "2小时前",
-                        content: content,
-                        imgURL: imgURL,
-                        commentNum: commentNum,
-                        goodNum: goodNum,
-                        shareNum: shareNum
-                    ),
-                    label: {
-                        HStack{
-                            Image("comment").resizable().aspectRatio(contentMode: .fit).frame(width: 20, height: 20).opacity(0.4)
-                            Text(String(commentNum)).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
-                        }
-                    }
-                )
+                HStack{
+                    Image("comment").resizable().aspectRatio(contentMode: .fit).frame(width: 20, height: 20).opacity(0.4)
+                    Text(String(commentNum)).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
+                }
                 Spacer()
                 HStack{
                     Image("share").resizable().aspectRatio(contentMode: .fit).frame(width: 20, height: 20).opacity(0.4)
@@ -82,7 +67,7 @@ struct FeedView: View {
                 }
                 Spacer()
                 Image("shenglue")
-            }.padding(.top, 10)
+            }.padding(.top, 30)
         }
         //.lineSpacing(0)
         .padding(.leading, 17).padding(.trailing, 20).padding(.bottom, 10)
@@ -91,9 +76,9 @@ struct FeedView: View {
     }
 }
 
-struct FeedView_Previews: PreviewProvider {
+struct DetailMainView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedView(
+        DetailMainView(
             nickname: "皮卡丘",
             avatar: "https://tvax2.sinaimg.cn/crop.0.0.828.828.180/6dbbe1d8ly8glgamkvg1aj20n00n0dhi.jpg",
             timestamp: "2小时前",

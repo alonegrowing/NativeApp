@@ -34,7 +34,7 @@ struct CommentView: View {
                         .frame(minHeight: 10, alignment: .top)
                         .lineSpacing(7) // 行间距
                         //.font(Font.system(size: 17))
-                        .font(.custom("KozGoPro-Regular", size: 15))
+                        .font(.custom("KozGoPro-Regular", size: 14))
                         .padding(.top, 5)//.lineLimit(-1)
                         .padding(.bottom, 5)
                         .foregroundColor(Color(hex:0x363636))
@@ -43,17 +43,19 @@ struct CommentView: View {
                         
                         Spacer()
                         Spacer()
+                        /*
                         HStack{
                             Image("comment").resizable().aspectRatio(contentMode: .fit).frame(width: 20, height: 20).opacity(0.4)
                             Text(String("2")).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
                         }
+                        */
                         Spacer()
                         HStack{
                             Image("good").resizable().aspectRatio(contentMode: .fit).frame(width: 20, height: 20).opacity(0.8)
                             Text("20219").font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
                         }
                         Spacer()
-                        Text("2分钟")
+                        Text("2分钟前")
                         .font(Font.system(size: 12))
                         .foregroundColor(Color.gray)
                     }
@@ -61,7 +63,7 @@ struct CommentView: View {
             }
         }
         .lineSpacing(0)
-        .padding(.leading, 12).padding(.trailing, 20).padding(.bottom, 5).padding(.top, 5)
+        .padding(.leading, 15).padding(.trailing, 20).padding(.bottom, 5).padding(.top, 5)
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(Color(hex: 0xFFFFFF))
     }

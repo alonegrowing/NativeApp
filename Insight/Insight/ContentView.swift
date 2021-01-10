@@ -11,7 +11,7 @@ struct ContentView: View {
                 }
                 .tag(0)
          
-            DetailView()
+            DiscoveryView()
                 .tabItem {
                     Image(systemName: "bookmark.circle.fill")
                     Text("发现")
