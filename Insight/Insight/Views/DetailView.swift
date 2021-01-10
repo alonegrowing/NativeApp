@@ -37,10 +37,11 @@ struct DetailView: View {
                         .font(.custom("KozGoPro-Regular", size: 19))
                     Spacer()
                 }
-                .padding(.leading, 12)
-                .padding(.bottom, 10)
-                .frame(width: nil, height: 40, alignment: .leading)
-                .background(Color(hex: 0xffffff))
+                    .padding(.leading, 12)
+                    .padding(.bottom, 10)
+                    .padding(.top, 10)
+                    .frame(width: nil, height: 40, alignment: .leading)
+                    .background(Color(hex: 0xffffff))
                 VStack(alignment: .leading) {
                     ForEach(results, id: \.id) {item in
                         CommentView(
