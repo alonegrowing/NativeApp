@@ -43,9 +43,23 @@ struct HomeBarItemTrailing: View {
 
 struct HomeView: View {
     init() {
-        UINavigationBar.appearance().backgroundColor = .init(white: 1, alpha: 0)
+        /*
+        let appearance = UINavigationBarAppearance()
+        appearance.shadowColor = .clear
+        
+        UINavigationBar.appearance().backgroundColor = UIColor(white: 0xFFFFFF, alpha: 0.01)
         UINavigationBar.appearance().standardAppearance.shadowColor = .clear
         UINavigationBar.appearance().isTranslucent = true
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        */
+        UINavigationBar.appearance().barTintColor = .clear
+        UINavigationBar.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        
+        
     }
     
     @State private var results = [Result]()
