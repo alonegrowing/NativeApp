@@ -67,10 +67,18 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 ScrollView {
-                    
                     ForEach(results, id: \.id) {item in
                         NavigationLink(
-                            destination: DetailView(),
+                            destination: DetailView(
+                                nickname: item.member.name,
+                                avatar: item.member.avatar,
+                                timestamp: "2小时前",
+                                content: item.content,
+                                imgURL: item.img,
+                                commentNum: item.interactive.comment_num,
+                                goodNum: item.interactive.good_num,
+                                shareNum: item.interactive.share_num
+                            ),
                             label: {
                                 FeedView(
                                     nickname: item.member.name,
