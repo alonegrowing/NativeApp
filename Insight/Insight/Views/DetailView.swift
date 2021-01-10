@@ -74,19 +74,20 @@ struct DetailView: View {
             .padding(.leading, 17).padding(.trailing, 20).padding(.bottom, 10)
             .frame(minHeight: 300)
             .background(Color(hex:0xFFFFFF)) // 设置自定义颜色
-            ScrollView {
-                CommentView()
-                CommentView()
-                CommentView()
-                CommentView()
-                CommentView()
-                CommentView()
+            VStack(alignment: .leading) {
+                ScrollView {
+                    CommentView()
+                    CommentView()
+                    CommentView()
+                    CommentView()
+                    CommentView()
+                    CommentView()
+                }
             }
-            .background(Color(hex: 0xffffff))
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .background(Color(hex:0xF9FAFA)) // 设置自定义颜色
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(Color(hex: 0xF9FAFA))
-
     }
 }
 
