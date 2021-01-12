@@ -36,7 +36,11 @@ struct HomeBarItemLeading: View {
 
 struct HomeBarItemTrailing: View {
     var body: some View {
-        Text("发布+").bold().font(.custom("KozGoPro-Regular", size: 15))
+        NavigationLink(destination: EditorView(), label: {
+            //Text("+").bold().font(.custom("KozGoPro-Regular", size: 25))
+            Image("editor").resizable().aspectRatio(contentMode: .fit).frame(width: 25, height: 25)
+        })
+        
     }
 }
 

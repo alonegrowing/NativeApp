@@ -65,7 +65,7 @@ struct ProfileView: View {
                 }
                 .frame(height: 150, alignment: .center)
                 .background(Color(hex:0xFFFFFF)) // 设置自定义颜色
-                .padding(.top, -20)
+                .padding(.top, -10)
                 .padding(.bottom, 5)
                 Group() {
                     SettingCell(imageName: "setting_feedback", title: "意见反馈")
