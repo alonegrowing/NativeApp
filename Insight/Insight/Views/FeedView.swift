@@ -41,17 +41,22 @@ struct FeedView: View {
                         .padding(.top, 10)//.lineLimit(-1)
                         .padding(.bottom, 10)
                         .foregroundColor(Color(hex:0x363636))
-                        
-                    URLImage(url: URL(string: imgURL)!, content: { image in
-                        image.resizable().aspectRatio(contentMode: .fit).frame(width: 300, height:200, alignment: .leading)
-                    })
+                    HStack {
+                        URLImage(url: URL(string: imgURL)!, content: { image in
+                            image.resizable().aspectRatio(contentMode: .fit).frame(width: 120, alignment: .leading)
+                        })
+                        URLImage(url: URL(string: "https://wx1.sinaimg.cn/mw690/006n4iHRly1gmnkfqspuoj30u0190qdm.jpg")!, content: { image in
+                            image.resizable().aspectRatio(contentMode: .fit).frame(width: 120, alignment: .leading)
+                        })
+                    }
                 }
-            }.frame(minWidth: 100, maxWidth: .infinity, minHeight: 44).padding(.top, 10)
+            }.frame(minWidth: 50, maxWidth: .infinity, minHeight: 44).padding(.top, 10)
             HStack{
                 HStack{
                     Image("good").resizable().aspectRatio(contentMode: .fit).frame(width: 20, height: 20).opacity(0.8)
                     Text(String(goodNum)).font(Font.system(size: 12)).foregroundColor(Color.gray).padding(.leading, -5).padding(.top, 2)
                 }
+                .frame(width: 50, alignment: .leading)
                 .onTapGesture(count: 1, perform: { //点赞事件
                     // 判断已点或者未点，再做 + 1 或者 -1 操作；目前先简单处理，每次点击直接 + 1
                     goodNum += 1
@@ -86,7 +91,7 @@ struct FeedView: View {
         }
         //.lineSpacing(0)
         .padding(.leading, 17).padding(.trailing, 20).padding(.bottom, 10)
-        .frame(minHeight: 300)
+        .frame(minHeight: 100)
         .background(Color(hex:0xFFFFFF)) // 设置自定义颜色
     }
 }
