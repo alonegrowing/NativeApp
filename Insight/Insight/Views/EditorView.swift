@@ -36,26 +36,12 @@ struct EditorView: View {
                 TextEditor(text: self.$text)
                     // make the color of the placeholder gray
                     .foregroundColor(self.text == "记录书摘格言，名家语录" ? .gray : .primary)
-                    
-                    .onAppear {
-                        // remove the placeholder text when keyboard appears
-                        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (noti) in
-                            withAnimation {
-                                if self.text == "记录书摘格言，名家语录" {
-                                    self.text = ""
-                                }
-                            }
+                      .onTapGesture {
+                        if self.text == "记录书摘格言，名家语录" {
+                          self.text = ""
                         }
-                        
-                        // put back the placeholder text if the user dismisses the keyboard without adding any text
-                        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (noti) in
-                            withAnimation {
-                                if self.text == "" {
-                                    self.text = "记录书摘格言，名家语录e"
-                                }
-                            }
-                        }
-                    }
+                      }
+                    .foregroundColor(Color.black)
                     .accentColor(.blue)
                     .padding(.top, 10)
                     .foregroundColor(Color.black)
