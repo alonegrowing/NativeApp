@@ -46,6 +46,7 @@ struct FeedView: View {
                         URLImage(url: URL(string: imgURL)!, content: { image in
                             image.resizable().aspectRatio(contentMode: .fit).frame(width: 120, alignment: .leading)
                         })
+                        /*
                         WebImage(url: URL(string: "https://wx1.sinaimg.cn/mw690/006n4iHRly1gmnkfqspuoj30u0190qdm.jpg"))
                             // Supports options and context, like `.delayPlaceholder` to show placeholder only when error
                             .onSuccess { image, data, cacheType in
@@ -65,11 +66,11 @@ struct FeedView: View {
                             .frame(width: 120, alignment: .center)
                             .clipShape(Circle())
                         
-                        /*
-                        URLImage(url: URL(string: "")!, content: { image in
+                        */
+                        URLImage(url: URL(string: "https://wx1.sinaimg.cn/mw690/0024achhly1gmpocgrbhjj60iw0anmy402.jpg")!, content: { image in
                             image.resizable().aspectRatio(contentMode: .fit).frame(width: 120, alignment: .leading)
                         })
-                        */
+                        
                     }
                 }
             }.frame(minWidth: 50, maxWidth: .infinity, minHeight: 44).padding(.top, 10)

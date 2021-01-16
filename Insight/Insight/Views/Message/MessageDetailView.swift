@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MessageDetailView: View {
+    init() {
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Georgia-Bold", size: 16)!]
+    }
     var body: some View {
         VStack (alignment: .leading){
             ScrollView{
@@ -23,6 +26,7 @@ struct MessageDetailView: View {
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(Color(hex:0xeeeeee)) // 设置自定义颜色
+        .navigationTitle("与空山陋室聊天中")
     }
 }
 

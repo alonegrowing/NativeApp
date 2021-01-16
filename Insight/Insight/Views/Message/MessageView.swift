@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MessageView: View {
     init() {
-        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Georgia-Bold", size: 17)!]
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Georgia-Bold", size: 16)!]
     }
     var body: some View {
         NavigationView {
