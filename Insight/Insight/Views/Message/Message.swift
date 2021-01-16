@@ -48,6 +48,11 @@ struct Message: View {
 
 struct Message_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView()
+        Message(
+            nickname: "空山陋室",
+            avatar: "https://tvax1.sinaimg.cn/crop.0.0.512.512.1024/001RVHM6ly8gm8882el30j60e80e8aag02.jpg",
+            timestamp: "2020/12/31",
+            content: "发明一种新吃法#一人食 ···"
+        )
     }
 }
