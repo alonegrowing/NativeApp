@@ -61,8 +61,6 @@ struct HomeView: View {
         UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
-        
-        
     }
     
     @State private var results = [Result]()

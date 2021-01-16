@@ -8,6 +8,7 @@
 import SwiftUI
 import Alamofire
 import URLImage
+import SDWebImageSwiftUI
 
 struct FeedView: View {
     var nickname:String
@@ -45,9 +46,30 @@ struct FeedView: View {
                         URLImage(url: URL(string: imgURL)!, content: { image in
                             image.resizable().aspectRatio(contentMode: .fit).frame(width: 120, alignment: .leading)
                         })
-                        URLImage(url: URL(string: "https://wx1.sinaimg.cn/mw690/006n4iHRly1gmnkfqspuoj30u0190qdm.jpg")!, content: { image in
+                        WebImage(url: URL(string: "https://wx1.sinaimg.cn/mw690/006n4iHRly1gmnkfqspuoj30u0190qdm.jpg"))
+                            // Supports options and context, like `.delayPlaceholder` to show placeholder only when error
+                            .onSuccess { image, data, cacheType in
+                                // Success
+                                // Note: Data exist only when queried from disk cache or network. Use `.queryMemoryData` if you really need data
+                            }
+                            .resizable() // Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size
+                            .placeholder(Image(systemName: "photo")) // Placeholder Image
+                            // Supports ViewBuilder as well
+                            .placeholder {
+                                Rectangle().foregroundColor(.gray)
+                            }
+                            .indicator(.activity) // Activity Indicator
+                            .transition(.fade(duration: 0.5)) // Fade Transition with duration
+                            .scaledToFit()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 120, alignment: .center)
+                            .clipShape(Circle())
+                        
+                        /*
+                        URLImage(url: URL(string: "")!, content: { image in
                             image.resizable().aspectRatio(contentMode: .fit).frame(width: 120, alignment: .leading)
                         })
+                        */
                     }
                 }
             }.frame(minWidth: 50, maxWidth: .infinity, minHeight: 44).padding(.top, 10)
