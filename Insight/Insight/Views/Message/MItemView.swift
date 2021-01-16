@@ -33,11 +33,11 @@ struct MItemView: View {
                     .shadow(radius: 3)
                     .padding(.all, 10)
             }
-            .frame(minWidth: 200, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 40, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+            .frame(maxWidth: 260, minHeight: 50, alignment: .leading)
             .background(Color(hex:0xFFFFFF)) // 设置自定义颜色
             .cornerRadius(5)
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50, maxHeight: .infinity, alignment: .leading)
+        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .padding(.leading, 16).padding(.bottom, 0).padding(.top, 20)
     }
 }

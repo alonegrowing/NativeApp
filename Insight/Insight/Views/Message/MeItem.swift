@@ -23,7 +23,7 @@ struct MeItem: View {
                     .shadow(radius: 3)
                     .padding(.all, 10)
             }
-            .frame(minWidth: 200, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 40, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+            .frame(maxWidth: 260, minHeight: 50, alignment: .leading)
             .background(Color(hex:0xFFFFFF)) // 设置自定义颜色
             .cornerRadius(5)
             URLImage(url: URL(string: avatar)!, content: { image in
@@ -31,7 +31,7 @@ struct MeItem: View {
                 .clipShape(Circle()).overlay(Circle().stroke(Color.white, lineWidth: 1))
             }).padding(.leading, 5)
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50, maxHeight: .infinity, alignment: .trailing)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
         .padding(.trailing, 16).padding(.bottom, 0).padding(.top, 20)
     }
 }
