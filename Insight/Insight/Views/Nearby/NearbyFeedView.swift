@@ -10,7 +10,7 @@ import Alamofire
 import URLImage
 import SDWebImageSwiftUI
 
-struct FeedView: View {
+struct NearbyFeedView: View {
     var nickname:String
     var avatar:String
     var timestamp:String
@@ -46,32 +46,14 @@ struct FeedView: View {
                         URLImage(url: URL(string: imgURL)!, content: { image in
                             image.resizable().aspectRatio(contentMode: .fit).frame(width: 120, alignment: .leading)
                         })
-                        /*
-                        WebImage(url: URL(string: "https://wx1.sinaimg.cn/mw690/006n4iHRly1gmnkfqspuoj30u0190qdm.jpg"))
-                            // Supports options and context, like `.delayPlaceholder` to show placeholder only when error
-                            .onSuccess { image, data, cacheType in
-                                // Success
-                                // Note: Data exist only when queried from disk cache or network. Use `.queryMemoryData` if you really need data
-                            }
-                            .resizable() // Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size
-                            .placeholder(Image(systemName: "photo")) // Placeholder Image
-                            // Supports ViewBuilder as well
-                            .placeholder {
-                                Rectangle().foregroundColor(.gray)
-                            }
-                            .indicator(.activity) // Activity Indicator
-                            .transition(.fade(duration: 0.5)) // Fade Transition with duration
-                            .scaledToFit()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 120, alignment: .center)
-                            .clipShape(Circle())
-                        
-                        */
-                        URLImage(url: URL(string: "https://wx1.sinaimg.cn/mw690/0024achhly1gmpocgrbhjj60iw0anmy402.jpg")!, content: { image in
-                            image.resizable().aspectRatio(contentMode: .fit).frame(width: 120, alignment: .leading)
-                        })
-                        
                     }
+                    HStack {
+                        Text("20小时前").font(Font.system(size: 11)).foregroundColor(Color.gray)
+                        Image("location").resizable().aspectRatio(contentMode: .fit).frame(width: 20, height: 20)
+                            .shadow(radius: 3).padding(.bottom, 7).padding(.leading, -5)
+                        Text("中关村东升科技园北领地").font(Font.system(size: 11)).foregroundColor(Color.gray).padding(.leading, -5)
+                        Text("· 3.1km").font(Font.system(size: 11)).foregroundColor(Color.gray)
+                    }.padding(.top, 10)
                 }
             }.frame(minWidth: 50, maxWidth: .infinity, minHeight: 44).padding(.top, 10)
             HStack{
@@ -119,9 +101,9 @@ struct FeedView: View {
     }
 }
 
-struct FeedView_Previews: PreviewProvider {
+struct NearbyFeedView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedView(
+        NearbyFeedView(
             nickname: "皮卡丘",
             avatar: "https://tvax2.sinaimg.cn/crop.0.0.828.828.180/6dbbe1d8ly8glgamkvg1aj20n00n0dhi.jpg",
             timestamp: "2小时前",

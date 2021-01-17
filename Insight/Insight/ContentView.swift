@@ -17,7 +17,7 @@ struct ContentView: View {
                     Text("发现")
                 }
                 .tag(1)
-         
+            
             MessageView()
                 .tabItem {
                     Image(systemName: "video.circle.fill")
@@ -25,7 +25,7 @@ struct ContentView: View {
                 }
                 .tag(2)
          
-            ProfileView()
+            SettingView()
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("我的")

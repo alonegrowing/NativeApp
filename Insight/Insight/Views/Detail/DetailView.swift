@@ -59,10 +59,8 @@ struct DetailView: View {
                 
             }
         }
-        //.padding(.top, 30)
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .navigationBarTitle(nickname, displayMode: .inline)
-        .navigationBarItems(leading: HomeBarItemLeading(), trailing: HomeBarItemTrailing())
         .background(Color(hex:0xF9FAFA)) // 设置自定义颜色
         .onAppear(perform: load)
     }

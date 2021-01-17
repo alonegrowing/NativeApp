@@ -34,15 +34,24 @@ struct HomeBarItemLeading: View {
     }
 }
 
+/*
 struct HomeBarItemTrailing: View {
     var body: some View {
+        /*
         NavigationLink(destination: EditorView(), label: {
             //Text("+").bold().font(.custom("KozGoPro-Regular", size: 25))
+            Image("editor").resizable().aspectRatio(contentMode: .fit).frame(width: 25, height: 25)
+        })
+        */
+        Button(action: {
+            print("Hours tapped!")
+        }, label: {
             Image("editor").resizable().aspectRatio(contentMode: .fit).frame(width: 25, height: 25)
         })
         
     }
 }
+*/
 
 struct HomeView: View {
     init() {
@@ -61,8 +70,11 @@ struct HomeView: View {
         UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
+        
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Georgia-Bold", size: 17)!]
     }
-    
+
+    @State var showToast: Bool = false
     @State private var results = [Result]()
     var body: some View {
         NavigationView {
@@ -87,11 +99,15 @@ struct HomeView: View {
             .background(Color(hex: 0xF9FAFA))
             //.edgesIgnoringSafeArea(.all) //利用顶部区域，视图会怼到最顶部上去
             .onAppear(perform: load)
-            //.navigationTitle("推荐")
+            .navigationTitle("首页")
             .navigationBarTitle("",displayMode: .inline)
-            .navigationBarItems(leading: HomeBarItemLeading(), trailing: HomeBarItemTrailing())
+            .navigationBarItems(leading: HomeBarItemLeading(), trailing: Button(action: {
+                self.showToast = true
+            }, label: {
+                Image("editor").resizable().aspectRatio(contentMode: .fit).frame(width: 25, height: 25)
+            }))
             //.navigationBarHidden(true)
-        }
+        }.toast(isShowing: $showToast, text: Text("Hello toast!"))
 
     }
     
