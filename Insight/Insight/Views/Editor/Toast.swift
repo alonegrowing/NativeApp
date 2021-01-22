@@ -67,6 +67,7 @@ struct Toast<Presenting>: View where Presenting: View  {
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                 .background(Color.secondary.colorInvert())
                 .foregroundColor(Color.primary)
+                //.transition(.flipFromBottom(duration: 100))
                 .transition(.slide)
                 .opacity(self.isShowing ? 1 : 0)
             }
