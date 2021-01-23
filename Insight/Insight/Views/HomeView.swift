@@ -52,7 +52,19 @@ struct HomeBarItemTrailing: View {
     }
 }
 */
-
+struct BackgroundClearView: UIViewRepresentable {
+    func makeUIView(context: Context) -> some UIView {
+        let view = UIView()
+        DispatchQueue.main.async {
+            view.superview?.superview?.backgroundColor = .clear
+        }
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
+}
 struct HomeView: View {
     init() {
         /*
@@ -73,8 +85,7 @@ struct HomeView: View {
         
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Georgia-Bold", size: 17)!]
     }
-
-    @State var showToast: Bool = false
+    @State private var isPresented = false
     @State private var results = [Result]()
     var body: some View {
         NavigationView {
@@ -102,12 +113,24 @@ struct HomeView: View {
             .navigationTitle("首页")
             .navigationBarTitle("",displayMode: .inline)
             .navigationBarItems(leading: HomeBarItemLeading(), trailing: Button(action: {
-                self.showToast = true
+                self.isPresented = true
             }, label: {
                 Image("editor").resizable().aspectRatio(contentMode: .fit).frame(width: 25, height: 25)
             }))
             //.navigationBarHidden(true)
-        }.toast(isShowing: $showToast, text: Text("Hello toast!"))
+            .fullScreenCover(isPresented: $isPresented, content: {
+                ZStack {
+                    Color.black.opacity(0.5)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            isPresented.toggle()
+                        }
+                    EditorView()
+                }
+                .background(BackgroundClearView())
+                .transition(.flipFromBottom)
+            })
+        }
 
     }
     
