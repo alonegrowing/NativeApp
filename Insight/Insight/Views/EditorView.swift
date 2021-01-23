@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EditorView: View {
     @State var text = "记录书摘格言，名家语录"
+    @State private var wordCount: Int = 140
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         VStack(alignment: .leading) {
@@ -39,11 +40,20 @@ struct EditorView: View {
                     .foregroundColor(Color.black)
                     .font(.custom("KozGoPro-Regular", size: 13))
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
+                    //.padding(.all, 10)
+                    .onChange(of: text) { value in
+                        let words = text.split { $0 == " " || $0.isNewline }
+                        self.wordCount = 140 - words.count
+                    }
+                HStack{
+                    Spacer()
+                    Text("你还可以输入\(wordCount) 个字").font(.custom("KozGoPro-Regular", size: 12)).foregroundColor(Color(hex: 0x999999)).padding(.trailing)
+                }
                 Spacer()
             }.padding(.top, -10)
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(Color(hex:0xF9F9F9)) // 设置自定义颜色
+        .background(Color(hex:0xFFFFFFF)) // 设置自定义颜色
         .navigationBarTitle("", displayMode: .inline)
         .navigationBarHidden(true)
     }

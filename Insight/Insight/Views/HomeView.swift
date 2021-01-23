@@ -118,6 +118,7 @@ struct HomeView: View {
                 Image("editor").resizable().aspectRatio(contentMode: .fit).frame(width: 25, height: 25)
             }))
             //.navigationBarHidden(true)
+            /*
             .fullScreenCover(isPresented: $isPresented, content: {
                 ZStack {
                     Color.black.opacity(0.5)
@@ -128,7 +129,18 @@ struct HomeView: View {
                     EditorView()
                 }
                 .background(BackgroundClearView())
-                .transition(.flipFromBottom)
+            })
+            */
+            .sheet(isPresented: $isPresented, content: {
+                ZStack {
+                    Color.black.opacity(0.5)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            isPresented.toggle()
+                        }
+                    EditorView()
+                }
+                .background(BackgroundClearView())
             })
         }
 
